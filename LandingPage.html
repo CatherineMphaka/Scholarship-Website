@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page design</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  
+  
+</head>
+<body>
+    <section>
+
+       <input type="checkbox" id="check">
+           <header>
+              <h2> <a href="C:\Users\Beebe\OneDrive\Documents\scholarship_project\LandingPage.html" class="logo">Lamuni S.H</a></h2>
+                     <div class="navigation">
+                        <a href="C:\Users\Beebe\OneDrive\Documents\scholarship_project\AllScholarships.html">Scholarships</a>
+                        <a href="C:\Users\Beebe\OneDrive\Documents\scholarship_project\Contact-Us.html">Contact Us</a>
+                    </div>
+                   <label for="check">
+                       <i class="fas fa-bars menu-btn"></i>
+                       <i class="fas fa-times close-btn"></i>
+                    </label>
+            </header>
+    <div class="content">
+        
+        <div class="info">
+            <h2>Lamuni: <br><span>Scholarship Hunters</span></h2>
+            <p>The hub of getting personalized scholarships based on where you are from.With Lamuni, you automatically qualify for the scholarships you view, all you have to do is meet all the other requirements
+            based on the scholarship that you choose. This is a website specifically curated for Basotho people to
+            find scholarships geared toward Lesotho as a country.<br> Head on to scholarships to browse through the 
+            scholarships you automatically qualify for.</p>          
+            
+        </div>
+        
+    </div>
+    <div class="slider-navigation">
+        <div class="nav-btn" data-url="C:\Users\Beebe\OneDrive\Documents\scholarship_project\AllScholarships.html"></div>
+        <div class="nav-btn" data-url="C:\Users\Beebe\OneDrive\Documents\scholarship_project\Contact-Us.html"></div>
+    </div>    
+   </section>
+
+       <div class="media-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+       </div>
+  
+   <script type="text/javascript">
+    <!--javascript for slider-navigation-->
+    const btns = document.querySelectorAll(".nav-btn");
+    
+    var sliderNav = function(manual){
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+
+        });
+
+         btns[manual].classList.add("active");
+         // Redirect to the URL
+    const url = btns[manual].getAttribute('data-url');
+    if (url) {
+        window.location.href = url;
+    }
+    }
+    btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        sliderNav(i);
+    });
+});
+      
+</script>    
+</body>
+</html>
